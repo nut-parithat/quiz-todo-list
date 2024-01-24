@@ -4,7 +4,9 @@ import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 import { Response } from 'express';
 import { AppManageResponseFormat } from 'src/util/mng-response-format';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('todo')
 @Controller('todo')
 export class TodoController {
   constructor(private readonly todoService: TodoService) { }

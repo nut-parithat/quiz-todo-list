@@ -43,7 +43,14 @@ $ yarn run start:dev
 
 # production mode
 $ yarn run start:prod
+
+app start
+http://localhost:3000
+
+swagger
+http://localhost:3000/docs
 ```
+
 
 ## Test
 
