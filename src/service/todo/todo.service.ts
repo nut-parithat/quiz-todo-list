@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class TodoService {
   todoList: TodoDto[] = []
 
-  create(createTodoDto: CreateTodoDto) {
+  create(createTodoDto: CreateTodoDto): TodoDto {
     try {
       const prepareTodo: TodoDto = {
         id: uuidv4(),
@@ -56,7 +56,7 @@ export class TodoService {
     }
   }
 
-  remove(id: string) {
+  remove(id: string): string {
     try {
       this.findOne(id)
       this.todoList = this.todoList?.filter(todo => todo?.id !== id)
